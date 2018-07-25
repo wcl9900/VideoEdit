@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="textColorPrimary">@color/white</color>
+
+    <color name="theme_black_actionbar_bg">#252424</color>
+    <color name="theme_black_status_bg">#1b1a1a</color>
+    <color name="theme_black_bg">@color/edit_bg</color>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="edit_bg">#686262</color>
+
+    <color name="button_normal">#302d2d</color>
+    <color name="button_pressed">#494646</color>
+    <color name="text_normal">#b9adad</color>
+</resources>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/edit_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp">
+
+        <com.jaygoo.widget.RangeSeekBar
+            android:id="@+id/rsb_clip"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            app:rsb_thumb_drawable="@drawable/ic_video_cut_left"
+            app:rsb_max="1"
+            app:rsb_min="0"
+            app:rsb_mode="range" />
+
+        <TextView
+            android:id="@+id/tv_clip_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/rsb_clip"
+            android:text="开始截取时间：" />
+
+        <EditText
+            android:id="@+id/edt_clip_start"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_clip_start"
+            android:layout_toRightOf="@id/tv_clip_start"
+            android:inputType=""
+            android:text="00:00:00.000" />
+
+        <TextView
+            android:id="@+id/tv_clip_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_clip_start"
+            android:layout_below="@+id/edt_clip_start"
+            android:text="结束截取时间：" />
+
+        <EditText
+            android:id="@+id/edt_clip_end"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_clip_end"
+            android:layout_marginTop="16dp"
+            android:layout_toRightOf="@+id/tv_clip_end"
+            android:inputType=""
+            android:text="00:00:00.000" />
+    </RelativeLayout>
+    <com.wcl.videoedit.widget.DashView
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@drawable/dash_line"
+        android:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_rotate_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="旋转角度：" />
+
+        <EditText
+            android:id="@+id/edt_rotate_degree"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:gravity="center"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:text="0" />
+
+        <TextView
+            android:id="@+id/tv_degree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="度" />
+
+        <ImageView
+            android:id="@+id/iv_rotate_90_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/text_normal"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/ic_rotate_90_degrees_left" />
+
+        <ImageView
+            android:id="@+id/iv_rotate_90_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/text_normal"
+            android:layout_marginLeft="8dp"
+            android:src="@drawable/ic_rotate_90_degrees_right" />
+
+        <Button
+            android:id="@+id/btn_add_text"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="4dp"
+            android:text="添加文字"
+            android:visibility="visible" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_merge_music"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="添加背景音乐："/>
+        <Button
+            android:id="@+id/button_single_select_music"
+            android:layout_width="54dp"
+            android:layout_height="40dp"
+            android:text="选择"/>
+        <com.wcl.videoedit.widget.MarqueeTextView
+            android:id="@+id/tv_single_music_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:hint="未添加音乐"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/tv_display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="输出分辨率：" />
+
+        <EditText
+            android:id="@+id/edt_display_out_width"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:hint="宽"
+            android:inputType="number" />
+
+        <TextView
+            android:id="@+id/tv_display_x"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="X" />
+
+        <EditText
+            android:id="@+id/edt_display_out_height"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:hint="高"
+            android:inputType="number" />
+
+        <ImageView
+            android:id="@+id/btn_display_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:tint="@color/text_normal"
+            android:layout_marginLeft="16dp"
+            android:src="@drawable/ic_display_switch" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_handle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="开始处理" />
+
+        <Button
+            android:id="@+id/button_play_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="播放处理视频" />
+
+        <ImageButton
+            android:id="@+id/button_single_video_share"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_share" />
+
+        <ImageButton
+            android:id="@+id/button_add_merge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_merge_line"/>
+    </LinearLayout>
+</LinearLayout>

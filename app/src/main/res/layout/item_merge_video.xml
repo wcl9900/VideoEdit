@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="62dp">
+    <ImageView
+        android:id="@+id/iv_merge_video"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:background="#000"/>
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:text="文件名"/>
+</LinearLayout>

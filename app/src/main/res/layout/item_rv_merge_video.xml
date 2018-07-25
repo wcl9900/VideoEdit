@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="50dp"
+    android:layout_height="match_parent"
+    android:background="#000">
+    <ImageView
+        android:id="@+id/iv_merge_item_thumb"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:scaleType="fitCenter"/>
+    <TextView
+        android:id="@+id/iv_merge_video_delete"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_gravity="right|top"
+        android:background="@drawable/shape_merge_delete"
+        android:gravity="center"
+        android:text="X"/>
+    <TextView
+        android:id="@+id/tv_merge_item_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:text="info"
+        android:textColor="#fff"
+        android:visibility="gone"/>
+</FrameLayout>

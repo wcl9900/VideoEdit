@@ -1,0 +1,50 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/theme_black_actionbar_bg</item>
+        <item name="colorPrimaryDark">@color/theme_black_status_bg</item>
+        <item name="colorAccent">@color/theme_black_bg</item>
+        <item name="android:windowBackground">@color/theme_black_bg</item>
+        <item name="buttonStyle">@style/AppTheme.ButtonStyle</item>
+        <item name="imageButtonStyle">@style/AppTheme.ImageButtonStyle</item>
+        <item name="android:imageWellStyle">@style/AppTheme.ImageButtonStyle</item>
+        <!--<item name="editTextStyle">@style/AppTheme.EditTextStyle</item>-->
+        <item name="android:textAppearance">@style/AppTheme.TextAppearance</item>
+        <item name="dialogTheme"></item>
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="AppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.FullScreen" parent="AppTheme.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <style name="AppTheme.ButtonStyle" parent="Base.Widget.AppCompat.Button">
+        <item name="android:background">@drawable/default_button_bg_selector</item>
+        <item name="android:textColor">@color/text_normal</item>
+    </style>
+
+    <style name="AppTheme.ImageButtonStyle" parent="Base.Widget.AppCompat.ImageButton">
+        <item name="android:background">@drawable/default_button_bg_selector</item>
+        <item name="android:tint">@color/text_normal</item>
+    </style>
+
+    <style name="AppTheme.EditTextStyle" parent="Base.V7.Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/text_normal</item>
+    </style>
+
+    <style name="AppTheme.TextAppearance" parent="TextAppearance.AppCompat">
+        <item name="android:textColor">@color/text_normal</item>
+    </style>
+
+    <style name="AppTheme.DialogTheme" parent="ThemeOverlay.AppCompat.Dialog">
+        <item name="android:windowBackground">@color/edit_bg</item>
+    </style>
+</resources>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Button
+        android:id="@id/marker_view_remove"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:padding="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/water_text_delete"
+        android:textSize="10dp"
+        android:text="x"/>
+    <TextView
+        android:id="@+id/edt_add_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/water_text_bg"
+        android:layout_below="@+id/marker_view_remove"
+        android:layout_alignLeft="@+id/marker_view_remove"
+        android:minWidth="30dp"
+        android:hint="添加的文字" />
+</RelativeLayout>
